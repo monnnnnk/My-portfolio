@@ -1,0 +1,74 @@
+/* reset */
+@import "/css/reset.css";
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap");
+
+/*  mouse circle */
+.mouse-circle,
+.mouse-dot {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.mouse-circle {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #c7a622;
+  animation: mouseCircle 5s infinite linear;
+}
+.mouse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgba(168, 87, 87, 0.523);
+  animation: mouseCircleDOt 5s infinite linear;
+}
+
+@keyframes mouseCircle {
+  0% {
+    width: 4rem;
+    height: 4rem;
+  }
+  25% {
+    width: 5rem;
+    height: 5rem;
+  }
+  50% {
+    width: 6rem;
+    height: 6rem;
+  }
+  75% {
+    width: 5rem;
+    height: 5rem;
+  }
+  100% {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@keyframes mouseCircleDOt {
+  0% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  50% {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  100% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+/* page bg */
+.page-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
